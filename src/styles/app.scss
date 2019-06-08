@@ -5,4 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #24292e;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+a {
+  color: #0366d6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+
+  > .content {
+    flex-grow: 1;
+    display: flex;
+    padding: 10px;
+  }
 }
