@@ -10,18 +10,53 @@ const Wrapper = styled.div`
   .title {
   }
 
-  .menu {
-    display: flex;
-    padding: 0px 10px;
+  nav {
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding-left: 0px;
+    }
 
-    > .menu-item {
-      padding: 0px 10px;
+    > ul {
+      display: flex;
+    }
 
-      > a.is-active {
-        cursor: default;
-        text-decoration: none;
-        font-weight: 500;
-      }
+    li {
+      display: block;
+      position: relative;
+      transition-duration: 0.5s;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+
+    li ul {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      transition: all 0.5s ease;
+      margin-top: 1rem;
+      left: 0;
+      display: none;
+    }
+
+    li:hover > ul,
+    li ul:hover {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    ul li ul li {
+      clear: both;
+      width: 100%;
+
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
     }
   }
 `;

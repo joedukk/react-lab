@@ -6,18 +6,32 @@ const Header: React.FC = () => {
   return (
     <Wrapper>
       <div className="title">React Lab</div>
-      <div className="menu">
-        <div className="menu-item">
-          <NavLink activeClassName="is-active" to="/dashboard">
-            Dashboard
-          </NavLink>
-        </div>
-        <div className="menu-item">
-          <NavLink activeClassName="is-active" to="/settings">
-            Settings
-          </NavLink>
-        </div>
-      </div>
+      <nav role="navigation">
+        <ul>
+          <li>
+            <NavLink activeClassName="is-active" to="/dashboard">
+              Dashboard
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName="is-active" to="/settings">
+              Settings
+            </NavLink>
+            <ul className="dropdown">
+              <li>
+                <NavLink activeClassName="is-active" to="/settings/user">
+                  User Profile
+                </NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName="is-active" to="/settings/about">
+                  About
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </Wrapper>
   );
 };
