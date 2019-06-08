@@ -1,7 +1,8 @@
 import React from "react";
+import { Dashboard } from "./containers";
 
 const App: React.FC = () => {
-  return <div>React Lab</div>;
+  return <Dashboard />;
 };
 
 export default App;
